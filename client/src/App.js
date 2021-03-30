@@ -27,6 +27,18 @@ const App = () => {
     const toggleCreateProductModal = () => setCreateProductModal(!createProductModal);
     const toggleEditProductModal = () => setEditProductModal(!editProductModal);
 
+    /////////////////////////////////// UTILITIES ////////////////////////////////////
+
+    // Function clearing input fields in createProductModal.
+    const clearInput = async () => {
+        try {
+            setCreateProductName('');
+            setCreateProductPrice('');
+        } catch (err) {
+            console.error(err);
+        };
+    };
+
     /////////////////////////////////// HTTP REQUESTS ////////////////////////////////
 
     // GET
@@ -50,6 +62,7 @@ const App = () => {
             const updProducts = [...products, { ...newProduct.data }];
             setProducts(updProducts);
             toggleCreateProductModal();
+            clearInput();
             getProducts();
         } catch (err) {
             console.error(err);
@@ -64,6 +77,7 @@ const App = () => {
         //     const updProducts = products.concat({ ...newProduct.data });
         //     setProducts(updProducts);
         //     toggleCreateProductModal();
+        //     clearInput();
         //     getProducts();
         // } catch (err) {
         //     console.error(err);
