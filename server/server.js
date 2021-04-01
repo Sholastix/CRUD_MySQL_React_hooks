@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/api', productRoute);
 
 // Synchronization with DB, if success -> server starts.
-(async function () {
+(async () => {
     try {
         await database.sync();
         app.listen(process.env.APP_PORT, () => {
@@ -24,4 +24,4 @@ app.use('/api', productRoute);
     } catch (err) {
         console.error(`Connection failed at port: ${process.env.APP_PORT}`, err);
     };
-}());
+})();

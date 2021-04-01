@@ -1,4 +1,4 @@
-# MySQL_CRUD_basic
+# server
 
 Приклад базового функціоналу CRUD у СКБД MySQL.
 
@@ -16,14 +16,14 @@ __________________________________________________________________
         3.1. npm install - встановлення модулів, необхідних для функціонування програми;
         3.2. npm start   - запуск коду.
 
-4.  Endpoints для POSTMAN:
+4.  Endpoints для POSTMAN (xxxx - порт під'єднання з .env):
 
-        http://localhost:5000/api/products/
+        http://localhost:xxxx/api/products/
         
         GET     - отримання списку продуктів.
         POST    - додавання у список нових продуктів.
         
-        http://localhost:5000/api/products/:id
+        http://localhost:xxxx/api/products/:id
 
         PUT     - редагування продукту за його ID.
         DELETE  - видалення продукту за його ID.
