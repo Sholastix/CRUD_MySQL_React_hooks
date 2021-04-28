@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 
-const { database } = require('../config/initializeDatabase');
+const database = require('../config/initializeDatabase');
 
 // Create model for DB.
 module.exports.Product = database.define('product', {

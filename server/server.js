@@ -3,8 +3,7 @@ const express = require('express');
 const cors = require('cors');
 
 require('./config/createDatabase')();
-require('./config/initializeDatabase')();
-const { database } = require('./config/initializeDatabase');
+const database = require('./config/initializeDatabase');
 const productRoute = require('./routes/productRoute');
 
 const app = express();
