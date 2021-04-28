@@ -15,7 +15,3 @@ __________________________________________________________________
    
         3.1. npm install - needed modules installation;
         3.2. npm start - code start.
-
-ATTENTION: if you have an error 'Unknown database 'CRUD_SAMPLE_MYSQL' after server starts - then just type
-    rs
-in terminal console and press 'ENTER'. Now everything should be fine.
